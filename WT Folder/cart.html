@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart - Online Bookstore</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>Online Bookstore</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html">Catalog</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="cart">
+    <div class="cart-page">
+        <div class="cart-header">
+          <h1>Your Cart</h1>
+        </div>
+        <div class="cart-items">
+          <div class="cart-item">
+            <img src="item.jpg" alt="Item">
+            <div class="cart-item-details">
+              <h3>Product Name</h3>
+              <p>Product Description</p>
+              <p class="price">$19.99</p>
+            </div>
+            <button class="remove-btn">Remove</button>
+          </div>
+        </div>
+        <div class="cart-total">
+          <p>Total: $19.99</p>
+          <button>Checkout</button>
+        </div>
+      </div>
+      
+  </section>
+  <footer>
+    <p>&copy; 2024 Online Bookstore. All rights reserved.</p>
+  </footer>
+  <style>
+  .cart {
+    padding: 40px 20px;
+    min-height: 100vh;
+  }
+  
+  .cart h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+  }
+  
+  /* Cart Items */
+  .cart-page {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .cart-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .cart-header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .cart-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cart-item img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  
+  .cart-item-details {
+    flex: 1;
+  }
+  
+  .cart-item-details h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+  }
+  
+  .cart-item-details p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+  }
+  
+  .cart-item-details .price {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  /* Remove Button */
+  .remove-btn {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .remove-btn:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+  }
+  
+  /* Cart Total Section */
+  .cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-top: 30px;
+  }
+  
+  .cart-total p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  .cart-total button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 14px 30px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cart-total button:hover {
+    background-color: var(--secondary-color);
+  }
+</style>
+</body>
+</html>

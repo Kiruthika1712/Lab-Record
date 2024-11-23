@@ -1,0 +1,337 @@
+/* ===========================
+   Global Reset and Variables
+=========================== */
+:root {
+    --primary-color: #6a5acd; /* Soft Purple */
+    --primary-dark: #483d8b; /* Dark Purple */
+    --secondary-color: #f67280; /* Soft Coral */
+    --background-light: #f4f4f9; /* Light Background */
+    --text-color: #2d2d2d; /* Dark Text */
+    --text-muted: #646464; /* Muted Text */
+    --white: #ffffff;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --font-family: 'Montserrat', sans-serif;
+}
+
+/* General Body and Layout */
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-light);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ===========================
+   Header Styles
+=========================== */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: var(--white);
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .logo h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ===========================
+   Hero Section
+=========================== */
+.hero {
+    background: linear-gradient(
+            135deg,
+            rgba(106, 90, 205, 0.8),
+            rgba(246, 114, 128, 0.8)
+        ),
+        url('https://via.placeholder.com/1200x500?text=') no-repeat center center/cover;
+    color: var(--white);
+    padding: 100px 20px;
+    text-align: center;
+    border-bottom: 4px solid var(--primary-color);
+    box-shadow: var(--box-shadow);
+    flex-grow: 1; /* Allow hero section to take remaining space */
+}
+
+.hero h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.125rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.05);
+}
+
+/* ===========================
+   Catalog Section
+=========================== */
+.catalog {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.catalog h2 {
+    font-size: 2.25rem;
+    color: var(--primary-dark);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.book-item {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    text-align: left;
+}
+
+.book-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.book-item h3 {
+    font-size: 1.375rem;
+    color: var(--primary-dark);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.book-item p {
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.book-item button {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-item button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* ===========================
+   Authentication Forms
+=========================== */
+.auth {
+    padding: 40px 20px;
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the form */
+}
+
+.auth h2 {
+    font-size: 1.875rem;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.auth form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth label {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.auth input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.auth input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(106, 90, 205, 0.5);
+}
+
+.auth button {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    font-size: 1.125rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.auth button:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.02);
+}
+
+.auth p {
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-top: 15px;
+}
+
+.auth p a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth p a:hover {
+    text-decoration: underline;
+}
+
+/* ===========================
+   Footer
+=========================== */
+footer {
+    background-color: var(--primary-dark);
+    color: var(--white);
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.875rem;
+    margin-top: auto; /* Ensures footer stays at bottom */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* ===========================
+   Responsive Design
+=========================== */
+@media (max-width: 768px) {
+    .book-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .book-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.875rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .auth {
+        margin: 30px 10px;
+        padding: 30px 15px;
+    }
+
+    .auth h2 {
+        font-size: 1.5rem;
+    }
+
+    .auth input {
+        font-size: 0.9rem;
+    }
+
+    .auth button {
+        font-size: 1rem;
+    }
+
+    .cart-page {
+        overflow: hidden; /* Remove scrolling on the cart page */
+    }
+}
+
+
